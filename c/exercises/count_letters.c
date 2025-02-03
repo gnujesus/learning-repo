@@ -4,7 +4,7 @@
 void deleteChar(char *str, int index) {
   int length = strlen(str);
 
-  if(length == 1){
+  if (length == 1) {
     str[0] = '\0';
   }
 
@@ -21,7 +21,7 @@ void deleteChar(char *str, int index) {
 }
 
 int main() {
-  char str[] = "lllooooo";
+  char str[] = "Hahahaha no puedo, estoy trabajando";
   printf("String to count: %s \n\n", str);
 
   int length = strlen(str);
@@ -31,7 +31,6 @@ int main() {
     int count = 0;
 
     for (int i = 0; i <= length;) {
-      printf("Value of i: %d \n\n", i);
       if (buffer == str[i]) {
         count++;
         length--;
@@ -41,13 +40,28 @@ int main() {
       }
     }
 
-    printf("%c ----> ", buffer);
+    switch (buffer) {
+    case '\n':
+      printf("Line jumps ----> ");
+      break;
+
+    case ' ':
+      printf("Spaces ----> ");
+      break;
+
+    case '\t':
+      printf("Tabs----> ");
+      break;
+
+    default:
+      printf("%c ----> ", buffer);
+      break;
+    }
+
     for (int i = 0; i < count; i++) {
       printf("* ");
     }
     printf("\n");
-
-    length--;
   }
 
   printf("\n");
