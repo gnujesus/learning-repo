@@ -22,6 +22,9 @@ void deleteChar(char *str, int index) {
 
 int main() {
   char str[] = "Hahahaha no puedo, estoy trabajando";
+
+  int integers[8];
+
   printf("String to count: %s \n\n", str);
 
   int length = strlen(str);
