@@ -3,6 +3,7 @@
 #include <stdbool.h>
 
 // TODO: Check for allocation success lol.
+// also on realloc pls
 
 typedef struct array {
   size_t capacity;

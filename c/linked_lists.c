@@ -17,6 +17,9 @@ struct node {
 };
 
 typedef struct node node;
+  ListNode *new_node = malloc(sizeof(ListNode));
+  new_node->val = 2;
+  temp->next = new_node;
 
   *
   */
