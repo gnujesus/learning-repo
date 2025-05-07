@@ -22,6 +22,13 @@ struct Card {
 	int color;
 };
 
+// NOTE:: The computer automatically allocated 4 bytes for the char, but it only uses one.
+struct SomeRandomStruct{
+	int length; // 4 bytes
+	int width;  // 4 bytes
+	char x; // 4 bytes allocated, but only using one
+}
+
 int main(){
 	//this, unlike the representation, is taking memory
 	// declaration
