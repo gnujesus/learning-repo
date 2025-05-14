@@ -5,42 +5,67 @@
 
 typedef struct node_t {
   int key;
+  char *value;
   struct node_t *next;
-  char value[];
 } node_t;
 
 typedef struct hashtable_t {
   size_t capacity;
   size_t size;
-  node_t *bucket; // just another way of saying "items"
+  node_t **bucket; // just another way of saying "items"
 } hashtable_t;
 
 int hash(char val[], size_t capacity) {
   int size_of_val = strlen(val);
   int final_val = pow(size_of_val, 4) * 3;
+
+  // This is ok but can be out of bounds
   return final_val;
-  // int index = (int)(final_val % capacity);
+  
+  // To keep it in bounds
+  // return final_val % capacity;
 }
 
 void map(int index, node_t **head) {}
 
 node_t *create_node(int key, char value[], node_t *head) {
 
-  //somewhere around here
-  node_t *temp = head->next;
+
+  // NODE CREATION
+
+  // Create new node
+  node_t *new = malloc(sizeof(node_t));
+
+  // Assign key
+  new->key = key;
+
+  // Allocate space for the value
+  new->value = malloc(strlen(value) + 1);
+
+  // Assign value
+  strcpy(new->value, value);
+
+  // Next value is null, so now the new value is the tail
+  new->next = NULL;
+
+  if(head == NULL){
+    return new;
+  }
+
+
+  // APPEND TO THE END OF THE LIST
+
+  node_t *temp = head;
 
   // if the next value is null, then we're on the tail
   while (temp->next != NULL){
     temp = temp->next;
   }
 
-  node_t *new = malloc(sizeof(node_t));
-  new->key = key;
-  strcpy(new->value, value);
-  new->next = NULL;
-
   temp->next = new;
-  return new;
+  return head;
+
+
   // I'm thinking on memory implications now
   // i mean, is this a copy? what assures me this is really being added to the tail?
   // oh yeah, now i'm sure
@@ -58,18 +83,13 @@ void printList(node_t *head) {
 }
 
 int main() {
-  char value[] = "Jon";
-  int hash_code = hash(value, 5);
+    node_t* head = NULL;
 
-  node_t *head;
-  node_t *temp;
+    head = create_node(1, "Jon", head);
+    head = create_node(2, "Arya", head);
+    head = create_node(3, "Bran", head);
 
-  temp = create_node(hash_code, value, head);
-  head = temp;
+    printList(head);  // Output: 1 - 2 - 3 -
 
-  // where did i fuck it up?
-
-  printList(head);
-
-  free(temp);
+    return 0;
 }
