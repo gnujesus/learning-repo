@@ -1,9 +1,13 @@
 // Allowed on go: fruits[2:] or fruites [:2]; [inclusive:exclusive]
 package main
 
-import "fmt"
-
+// import "fmt"
+//
 func main() {
-	cards := newDeck()
-	fmt.Println(cards.toString())
+	// fmt.Println(cards.toString())
+	// cards.saveToFile("my-cards.txt")
+	var newDeck deck = loadFromFile("my-cards.txt")
+
+	nd := newDeck.shuffle()
+	nd.print()
 }
