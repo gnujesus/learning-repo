@@ -1,0 +1,15 @@
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\bin\Debug\net9.0\BasicSyntax.exe
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\bin\Debug\net9.0\BasicSyntax.deps.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\bin\Debug\net9.0\BasicSyntax.runtimeconfig.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\bin\Debug\net9.0\BasicSyntax.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\bin\Debug\net9.0\BasicSyntax.pdb
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.AssemblyInfoInputs.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.AssemblyInfo.cs
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.csproj.CoreCompileInputs.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.sourcelink.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\refint\BasicSyntax.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.pdb
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\BasicSyntax.genruntimeconfig.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\BasicSyntax\obj\Debug\net9.0\ref\BasicSyntax.dll
