@@ -1,0 +1,15 @@
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\bin\Debug\net9.0\WebServerSimulation.exe
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\bin\Debug\net9.0\WebServerSimulation.deps.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\bin\Debug\net9.0\WebServerSimulation.runtimeconfig.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\bin\Debug\net9.0\WebServerSimulation.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\bin\Debug\net9.0\WebServerSimulation.pdb
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.AssemblyInfoInputs.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.AssemblyInfo.cs
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.csproj.CoreCompileInputs.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.sourcelink.json
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\refint\WebServerSimulation.dll
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.pdb
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\WebServerSimulation.genruntimeconfig.cache
+C:\Users\juan.martinezd\git\learning-repo\c_sharp\multithreading\WebServerSimulation\obj\Debug\net9.0\ref\WebServerSimulation.dll
