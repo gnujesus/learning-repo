@@ -44,6 +44,4 @@ func main() {
 	jesus := newUser("Jesus", "")
 
 	fmt.Println(jesus)
-
-	message := "Hello World"
 }
