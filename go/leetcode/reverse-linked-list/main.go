@@ -1,0 +1,10 @@
+package main
+
+type Node struct{
+	value int
+	next *Node
+}
+
+func main(){
+	head := Node{}
+}

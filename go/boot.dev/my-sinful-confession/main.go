@@ -5,12 +5,12 @@ func getNameCounts(names []string) map[rune]map[string]int {
 
 	for _, val := range names {
 		firstLetter := []rune(val)[0]
-
-		_, ok := nested[firstLetter]
-
-		if !ok {
-			nested[firstLetter] = 
+		if m, ok := nested[firstLetter]; !ok{
+			nested[firstLetter] = map[string]int{
+				val: 1
+			}
 		}
+
 	}
 
 	return nested
