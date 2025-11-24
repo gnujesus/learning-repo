@@ -115,7 +115,6 @@ Vector<T>::~Vector()
 	free(m_arr);
 }
 
-// not contemplating size 1 vectors, nor empty vectors (recently allocated)
 template <typename T>
 void Vector<T>::PushFront(const T &val)
 {
@@ -158,18 +157,20 @@ void Vector<T>::PushBack(const T &val)
 
 template <typename T>
 const bool Vector<T>::Pop(const size_t index){
-	if(index > m_size){
-		std::runtime_error("Runtime Error: Index out of bounds");
-	}
+		if(index >= m_size){
+        throw std::runtime_error("Runtime Error: Index out of bounds");
+    }
 
-	for(int i = 0; i < m_size; i++){
-		if(i == index){
-			m_arr[i].~T();
-			return true;
-		}
-	}
+    m_arr[index].~T();
 
-	return false;
+    // Shift all elements after index one position left
+    for(size_t i = index; i < m_size - 1; i++){
+        new (&m_arr[i]) T(std::move(m_arr[i + 1]));
+        m_arr[i + 1].~T();
+    }
+
+    --m_size;
+    return true;
 }
 
 // returns a reference to the original pointer to avoid copies.
