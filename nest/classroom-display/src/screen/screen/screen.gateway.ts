@@ -1,24 +1,68 @@
 import { Logger } from '@nestjs/common';
-import { SubscribeMessage, WebSocketGateway, WebSocketServer, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
-import { Server, Socket } from 'socket.io';
+import {
+  WebSocketGateway,
+  WebSocketServer,
+  OnGatewayConnection,
+  OnGatewayDisconnect,
+} from '@nestjs/websockets';
+import { Socket, Server } from 'socket.io';
+import { Classroom } from '@app/types/classroom.types';
+import { HelperService } from '@app/helper/helper.service';
+import {
+  WEBSOCKET_NAMESPACE_PREFIX,
+  WEBSOCKET_NAMESPACE_PATTERN,
+} from '@app/constants/websocket.constants';
 
 @WebSocketGateway({
   cors: { origin: '*' },
-  namespace: /^\/screens\/[A-Z0-9]+$/
+  namespace: WEBSOCKET_NAMESPACE_PATTERN, //to accept all namespaces like AH302
 })
 export class ScreenGateway implements OnGatewayConnection, OnGatewayDisconnect {
-  handleConnection(client: Socket) {
-    throw new Error('Method not implemented.');
-  }
-
-  handleDisconnect(client: Socket) {
-    throw new Error('Method not implemented.');
-  }
+  @WebSocketServer()
+  server: Server;
 
   private readonly logger = new Logger(ScreenGateway.name);
 
-  @WebSocketServer();
-  private readonly server: Server;
+  constructor(private readonly helperService: HelperService) { }
 
+  // Connection lifecycle
 
+  handleConnection(client: Socket) {
+    const code: string = this.helperService.extractCodeFromNamespace(
+      client.nsp.name,
+    );
+    const classroom: Classroom = this.helperService.parseClassroomCode(code);
+
+    this.logger.log(
+      `[CONNECTED] Screen to classroom ${classroom.building}-${classroom.room}.`,
+    );
+  }
+
+  handleDisconnect(client: Socket) {
+    const code: string = this.helperService.extractCodeFromNamespace(
+      client.nsp.name,
+    );
+    const classroom: Classroom = this.helperService.parseClassroomCode(code);
+
+    this.logger.warn(
+      `[DISCONNECTED] Screen from classroom ${classroom.building}-${classroom.room} disconnected.`,
+    );
+  }
+
+  sendToClassroom(classroom: string, event: string, data: any) {
+    const namespacePath: string = `${WEBSOCKET_NAMESPACE_PREFIX}/${classroom}`;
+    const namespace = this.server.of(namespacePath);
+
+    this.logger.log(`[SEND] Event: ${event}; To classroom: ${classroom}`);
+
+    namespace.emit(event, data);
+  }
+
+  broadcastToAll(event: string, data: any) {
+    this.logger.warn(`[SEND] Event: ${event}; To all classrooms`); // a warning, since this could be a dangerous operation
+
+    this.server.emit(event, data);
+  }
 }
+
+// ws://localhost:3000/screens/AH302
