@@ -156,6 +156,7 @@ void Vector<T>::PushBack(const T &val)
 	m_arr[m_size - 1] = val;
 }
 
+// TODO: missing shifting all elements after delete
 template <typename T>
 const bool Vector<T>::Pop(const size_t index){
 	if(index > m_size){

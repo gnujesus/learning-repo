@@ -1,0 +1,36 @@
+[
+	{
+		"classroom": "EL304",
+		"serverDateTime": "2025-12-04T09:30:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+
+				"courseCode": "MAT-101",
+				"courseTitle": "ÁLGEBRA Y GEOMETRÍA",
+				"section": "01",
+				"instructor": "John Doe",
+				"startTime": "09:00",
+				"endTime": "11:00"
+			},
+			{
+				"courseCode": "MAT-201",
+
+				"courseTitle": "CÁLCULO II",
+				"section": "02",
+				"instructor": "Jane Smith",
+				"startTime": "11:00",
+				"endTime": "13:00"
+			},
+			{
+				"courseCode": "FIS-101",
+				"courseTitle": "FÍSICA I",
+				"section": "01",
+				"instructor": "Carlos Pérez",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			}
+		]
+	},
+]
