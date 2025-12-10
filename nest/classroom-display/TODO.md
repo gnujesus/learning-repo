@@ -60,8 +60,8 @@ START_OF_FILE
 
 ### Task 2.5: Implement Send Methods ⬅️ NEXT
 
-- [ ] Add sendToClassroom method
-- [ ] Add broadcastToAll method
+- [x] Add sendToClassroom method
+- [x] Add broadcastToAll method
 - [ ] Test both methods compile without errors
 
 

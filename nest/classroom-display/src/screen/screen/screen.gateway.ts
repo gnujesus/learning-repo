@@ -9,13 +9,12 @@ import { Socket, Server } from 'socket.io';
 import { Classroom } from '@app/types/classroom.types';
 import { HelperService } from '@app/helper/helper.service';
 import {
-  WEBSOCKET_NAMESPACE_PREFIX,
-  WEBSOCKET_NAMESPACE_PATTERN,
+  WEBSOCKET_NAMESPACE,
 } from '@app/constants/websocket.constants';
 
 @WebSocketGateway({
   cors: { origin: '*' },
-  namespace: WEBSOCKET_NAMESPACE_PATTERN, //to accept all namespaces like AH302
+  namespace: WEBSOCKET_NAMESPACE, // main namespace: {url}/screens 
 })
 export class ScreenGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
@@ -28,13 +27,21 @@ export class ScreenGateway implements OnGatewayConnection, OnGatewayDisconnect {
   // Connection lifecycle
 
   handleConnection(client: Socket) {
-    const code: string = this.helperService.extractCodeFromNamespace(
-      client.nsp.name,
-    );
+    const code: string = client.handshake.query.classroom as string;
+    console.log(code);
+
+    if (!code) {
+      client.disconnect();
+      this.logger.fatal('[ERROR] Client tried to connect without classroom parameter. Disconected.');
+      return;
+    }
+
     const classroom: Classroom = this.helperService.parseClassroomCode(code);
+    client.join(`building:${classroom.building}:room:${classroom.room}`)
+    client.join(`room:${classroom.room}`)
 
     this.logger.log(
-      `[CONNECTED] Screen to classroom ${classroom.building}-${classroom.room}.`,
+      `[CONNECTED] Screen connected to building:${classroom.building}:room:${classroom.room}.`,
     );
   }
 
@@ -49,19 +56,25 @@ export class ScreenGateway implements OnGatewayConnection, OnGatewayDisconnect {
     );
   }
 
-  sendToClassroom(classroom: string, event: string, data: any) {
-    const namespacePath: string = `${WEBSOCKET_NAMESPACE_PREFIX}/${classroom}`;
-    const namespace = this.server.of(namespacePath);
+  sendToClassroom(code: string, event: string, data: any) {
+    const classroom: Classroom = this.helperService.parseClassroomCode(code);
+    this.logger.log(`[SEND] Event: ${event} to building:${classroom.building}:room:${classroom.room}`);
 
-    this.logger.log(`[SEND] Event: ${event}; To classroom: ${classroom}`);
-
-    namespace.emit(event, data);
+    this.server
+      .of('/screens')
+      .to(`building:${classroom.building}:room:${classroom.room}`)
+      .emit(event, data);
+    // namespace.emit(event, data);
   }
 
   broadcastToAll(event: string, data: any) {
     this.logger.warn(`[SEND] Event: ${event}; To all classrooms`); // a warning, since this could be a dangerous operation
 
     this.server.emit(event, data);
+  }
+
+  registerToRoom(room: string, asignee: string) {
+
   }
 }
 
