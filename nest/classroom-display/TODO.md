@@ -62,7 +62,7 @@ START_OF_FILE
 
 - [x] Add sendToClassroom method
 - [x] Add broadcastToAll method
-- [ ] Test both methods compile without errors
+- [x] Test both methods compile without errors
 
 
 ### Task 2.6: Implement Stats Methods
@@ -75,49 +75,39 @@ START_OF_FILE
 ### Task 2.7: Export Gateway
 - [ ] Open `src/screen/screen.module.ts`
 
-- [ ] Verify `ScreenGateway` in `providers` array
-- [ ] Verify `ScreenGateway` in `exports` array
-- [ ] Code compiles without errors
+- [x] Verify `ScreenGateway` in `providers` array
+- [x] Verify `ScreenGateway` in `exports` array
+- [x] Code compiles without errors
 
 ---
 
 ## Phase 3: Test WebSocket Connection
 
-### Task 3.1: Create Test HTML Client
-- [ ] Create `test-client.html` in project root
-
-- [ ] Add Socket.IO client from CDN
-- [ ] Add input field for classroom code
-- [ ] Add Connect and Disconnect buttons
-- [ ] Add logging display area
-- [ ] Add listener for updateSchedule event
-
 ### Task 3.2: Test Basic Connection
-- [ ] Start server
+- [x] Start server
 
-- [ ] Open test-client.html in browser
-- [ ] Enter classroom EL304
-- [ ] Click Connect
-- [ ] Verify browser shows CONNECTED
-- [ ] Verify server logs show connection with correct classroom
-- [ ] Verify server logs show building EL and room 304
-- [ ] Click Disconnect
-- [ ] Verify browser shows DISCONNECTED
-- [ ] Verify server logs show disconnection
+- [x] Open test-client.html in browser
+- [x] Enter classroom EL304
+- [x] Verify browser shows CONNECTED
+- [x] Verify server logs show connection with correct classroom
+- [x] Verify server logs show building EL and room 304
+- [x] Disconnect
+- [x] Verify browser shows DISCONNECTED
+- [x] Verify server logs show disconnection
 
 ### Task 3.3: Test Multiple Connections
-- [ ] Open test client in Browser Tab 1
-- [ ] Connect to EL304
-- [ ] Open test client in Browser Tab 2
-- [ ] Connect to EL304 (same classroom)
-- [ ] Open test client in Browser Tab 3
-- [ ] Connect to AH301 (different classroom)
-- [ ] Verify server logs show all 3 connections
-- [ ] Verify server logs show 2 connections to EL304
-- [ ] Verify server logs show 1 connection to AH301
-- [ ] Close Tab 2
-- [ ] Verify server logs show only Tab 2 disconnected
-- [ ] Verify Tabs 1 and 3 still connected
+- [x] Open test client in Browser Tab 1
+- [x] Connect to EL304
+- [x] Open test client in Browser Tab 2
+- [x] Connect to EL304 (same classroom)
+- [x] Open test client in Browser Tab 3
+- [x] Connect to AH301 (different classroom)
+- [x] Verify server logs show all 3 connections
+- [x] Verify server logs show 2 connections to EL304
+- [x] Verify server logs show 1 connection to AH301
+- [x] Close Tab 2
+- [x] Verify server logs show only Tab 2 disconnected
+- [x] Verify Tabs 1 and 3 still connected
 
 ---
 

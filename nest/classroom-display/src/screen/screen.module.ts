@@ -4,5 +4,6 @@ import { HelperService } from '@app/helper/helper.service';
 
 @Module({
   providers: [ScreenGateway, HelperService],
+  exports: [ScreenGateway],
 })
-export class ScreenModule { }
+export class ScreenModule {}
