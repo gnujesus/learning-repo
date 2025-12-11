@@ -1,0 +1,431 @@
+[
+	{
+		"classroom": "AH302",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "MED-101",
+				"courseTitle": "ANATOMÍA HUMANA I",
+				"section": "01",
+				"instructor": "Dr. María Rodríguez",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+
+			{
+
+				"courseCode": "MED-102",
+
+				"courseTitle": "FISIOLOGÍA GENERAL",
+				"section": "01",
+				"instructor": "Dr. Carlos Méndez",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+			{
+				"courseCode": "MED-201",
+				"courseTitle": "BIOQUÍMICA MÉDICA",
+
+				"section": "02",
+				"instructor": "Dra. Ana López",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "MED-103",
+				"courseTitle": "HISTOLOGÍA",
+
+				"section": "01",
+				"instructor": "Dr. Roberto Santos",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "MED-104",
+				"courseTitle": "EMBRIOLOGÍA",
+				"section": "01",
+				"instructor": "Dra. Patricia Gómez",
+				"startTime": "17:00",
+
+				"endTime": "19:00"
+
+			}
+
+		]
+	},
+	{
+		"classroom": "AH305",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "MED-301",
+				"courseTitle": "FARMACOLOGÍA I",
+
+				"section": "03",
+				"instructor": "Dr. Juan Pérez",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "MED-302",
+				"courseTitle": "PATOLOGÍA GENERAL",
+				"section": "02",
+				"instructor": "Dra. Sofía Martínez",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+
+			{
+
+				"courseCode": "MED-303",
+
+				"courseTitle": "MICROBIOLOGÍA MÉDICA",
+				"section": "01",
+				"instructor": "Dr. Luis Ramírez",
+
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "MED-304",
+				"courseTitle": "INMUNOLOGÍA",
+				"section": "02",
+				"instructor": "Dra. Carmen Díaz",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+
+			{
+
+				"courseCode": "MED-401",
+
+				"courseTitle": "SEMIOLOGÍA MÉDICA",
+				"section": "01",
+				"instructor": "Dr. Miguel Ángel Torres",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+	},
+	{
+		"classroom": "EL304",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "ISC-201",
+				"courseTitle": "ESTRUCTURAS DE DATOS",
+
+				"section": "01",
+				"instructor": "Ing. Pedro Sánchez",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "ISC-202",
+				"courseTitle": "BASES DE DATOS I",
+				"section": "02",
+				"instructor": "Ing. Laura Fernández",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+			{
+				"courseCode": "ISC-301",
+				"courseTitle": "INGENIERÍA DE SOFTWARE",
+				"section": "01",
+				"instructor": "Ing. Ricardo Mejía",
+
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "ISC-302",
+				"courseTitle": "SISTEMAS OPERATIVOS",
+
+				"section": "03",
+				"instructor": "Ing. Gabriela Reyes",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "ISC-401",
+				"courseTitle": "DESARROLLO WEB AVANZADO",
+				"section": "02",
+				"instructor": "Ing. Daniel Castro",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+	},
+	{
+		"classroom": "EL401",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "IND-201",
+				"courseTitle": "CIRCUITOS ELÉCTRICOS I",
+				"section": "01",
+				"instructor": "Ing. Antonio Vargas",
+				"startTime": "08:00",
+
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "IND-202",
+				"courseTitle": "ELECTRÓNICA DIGITAL",
+				"section": "02",
+
+				"instructor": "Ing. Beatriz Morales",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+
+			{
+
+				"courseCode": "IND-301",
+
+				"courseTitle": "CONTROL AUTOMÁTICO",
+				"section": "01",
+				"instructor": "Ing. Francisco Ortiz",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "IND-302",
+				"courseTitle": "SEÑALES Y SISTEMAS",
+				"section": "03",
+				"instructor": "Ing. Elena Navarro",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "IND-401",
+				"courseTitle": "MICROPROCESADORES",
+
+				"section": "02",
+				"instructor": "Ing. Jorge Ruiz",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+	},
+	{
+		"classroom": "EL205",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "ISC-101",
+				"courseTitle": "PROGRAMACIÓN xd",
+				"section": "01",
+				"instructor": "Ing. Andrea Silva",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "ISC-102",
+				"courseTitle": "MATEMÁTICAS DISCRsdfasETAS",
+				"section": "02",
+				"instructor": "Lic. Ramón Vega",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+			{
+				"courseCode": "ISC-103",
+				"courseTitle": "ALGORITMOS Y COMPLEJIDAD",
+				"section": "01",
+				"instructor": "Ing. Claudia Herrera",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "ISC-203",
+				"courseTitle": "PROGRAMACIÓN ORIENTADA A OBJETOS",
+				"section": "03",
+				"instructor": "Ing. Sergio Guzmán",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "ISC-204",
+				"courseTitle": "REDES DE COMPUTADORAS",
+				"section": "02",
+				"instructor": "Ing. Mariana Cruz",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+
+	},
+	{
+		"classroom": "GC201",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "ING-201",
+				"courseTitle": "MECÁNICA DE FLUIDOS",
+				"section": "01",
+				"instructor": "Ing. Alberto Campos",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "ING-202",
+				"courseTitle": "RESISTENCIA DE MATERIALES",
+				"section": "02",
+				"instructor": "Ing. Valentina Rojas",
+				"startTime": "10:00",
+
+				"endTime": "12:00"
+
+			},
+			{
+				"courseCode": "FIN-301",
+				"courseTitle": "FINANZAS CORPORATIVAS",
+				"section": "01",
+				"instructor": "Lic. Eduardo Jiménez",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "ING-301",
+				"courseTitle": "TERMODINÁMICA",
+				"section": "03",
+				"instructor": "Ing. Rosa Mendoza",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "FIN-302",
+				"courseTitle": "ANÁLISIS DE INVERSIONES",
+				"section": "02",
+				"instructor": "Lic. Héctor Paredes",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+
+	},
+	{
+		"classroom": "GC305",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+				"courseCode": "ING-401",
+				"courseTitle": "DISEÑO DE ESTRUCTURAS",
+				"section": "01",
+				"instructor": "Ing. Diana Flores",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+
+			{
+
+				"courseCode": "ADM-201",
+				"courseTitle": "GESTIÓN DE PROYECTOS",
+				"section": "02",
+
+				"instructor": "MBA. Rodrigo León",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+			{
+				"courseCode": "FIN-401",
+				"courseTitle": "MERCADOS FINANCIEROS",
+				"section": "01",
+				"instructor": "Lic. Isabel Ramos",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+			{
+				"courseCode": "ING-402",
+				"courseTitle": "INGENIERÍA ECONÓMICA",
+				"section": "03",
+				"instructor": "Ing. Pablo Moreno",
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "ADM-301",
+				"courseTitle": "CONTABILIDAD GERENCIAL",
+				"section": "02",
+				"instructor": "CPA. Lorena Aguirre",
+				"startTime": "17:00",
+				"endTime": "19:00"
+			}
+		]
+	},
+	{
+		"classroom": "GC102",
+		"serverDateTime": "2025-12-10T08:00:00-04:00",
+		"currentYear": 2025,
+
+		"currentTerm": "2025-10",
+		"classes": [
+			{
+
+				"courseCode": "ECO-201",
+
+				"courseTitle": "MICROECONOMÍA",
+
+				"section": "01",
+				"instructor": "Lic. Manuel Castillo",
+				"startTime": "08:00",
+				"endTime": "10:00"
+			},
+			{
+				"courseCode": "ECO-202",
+				"courseTitle": "MACROECONOMÍA",
+				"section": "02",
+
+				"instructor": "Lic. Carolina Suárez",
+				"startTime": "10:00",
+				"endTime": "12:00"
+			},
+			{
+
+				"courseCode": "EST-301",
+
+				"courseTitle": "ESTADÍSTICA APLICADA",
+				"section": "01",
+				"instructor": "Lic. Fernando Arias",
+				"startTime": "13:00",
+				"endTime": "15:00"
+			},
+
+			{
+				"courseCode": "FIN-201",
+
+				"courseTitle": "MATEMÁTICAS FINANCIERAS",
+				"section": "03",
+				"instructor": "Lic. Verónica Gil",
+
+				"startTime": "15:00",
+				"endTime": "17:00"
+			},
+			{
+				"courseCode": "ADM-401",
+				"courseTitle": "ESTRATEGIA EMPRESARIAL",
+				"section": "02",
+				"instructor": "MBA. Andrés Ponce",
+				"startTime": "17:00",
+				"endTime": "19:00"
+
+			}
+
+		]
+	}
+]
