@@ -21,7 +21,7 @@ export class ScreenGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   private readonly logger = new Logger(ScreenGateway.name);
 
-  constructor(private readonly helperService: HelperService) {}
+  constructor(private readonly helperService: HelperService) { }
 
   // Connection lifecycle
 
