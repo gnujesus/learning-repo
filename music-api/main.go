@@ -1,11 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"io"
 	"log"
 	"net/http"
 )
-
-import "fmt"
 
 type Song struct {
 	Id              int
@@ -28,12 +28,42 @@ type MusicHandler struct {
 	MusicStorage []string
 }
 
-func (f *MusicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	switch r.URL.Path {
-	case "/songs":
-		fmt.Printf("%s\n", r.Header)
+func (m *MusicHandler) StoreMusic(r *http.Request) {
+	body, err := io.ReadAll(r.Body)
+
+	if err != nil {
+		fmt.Println("Error")
+		return
+	}
+
+	defer r.Body.Close()
+
+	fmt.Println(string(body))
+}
+
+func (m *MusicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	switch r.Method {
+
+	// GET
+	case http.MethodGet:
+		switch r.URL.Path {
+		case "/songs":
+			fmt.Printf("%s\n", r.Header)
+		default:
+			fmt.Println("No GET method supported")
+		}
+
+	// POST
+	case http.MethodPost:
+		switch r.URL.Path {
+		case "/songs":
+			m.StoreMusic(r)
+		default:
+			fmt.Println("No POST method supported")
+		}
+
 	default:
-		fmt.Printf("%s\n", r.URL.Path)
+		fmt.Println("Method not supported")
 	}
 }
 
