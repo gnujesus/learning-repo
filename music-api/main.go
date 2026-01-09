@@ -38,7 +38,14 @@ func (m *MusicHandler) StoreMusic(r *http.Request) {
 
 	defer r.Body.Close()
 
-	fmt.Println(string(body))
+	songId := len(m.MusicStorage + 1)
+	song := Song{len(m.MusicStorage)}
+
+	m.MusicStorage = append(m.MusicStorage, string(body))
+}
+
+func (m *MusicHandler) GetAllMusic() {
+
 }
 
 func (m *MusicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -48,7 +55,7 @@ func (m *MusicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	case http.MethodGet:
 		switch r.URL.Path {
 		case "/songs":
-			fmt.Printf("%s\n", r.Header)
+			fmt.Printf("%s\n", r.Method)
 		default:
 			fmt.Println("No GET method supported")
 		}
@@ -62,6 +69,23 @@ func (m *MusicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("No POST method supported")
 		}
 
+	// PUT
+	case http.MethodPut:
+		switch r.URL.Path {
+		case "/songs":
+			m.StoreMusic(r)
+		default:
+			fmt.Println("No POST method supported")
+		}
+
+	// DELETE
+	case http.MethodDelete:
+		switch r.URL.Path {
+		case "/songs":
+			m.StoreMusic(r)
+		default:
+			fmt.Println("No POST method supported")
+		}
 	default:
 		fmt.Println("Method not supported")
 	}
